@@ -1,0 +1,101 @@
+/*헤더*/
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #d3d6da;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.header-menu img {
+	width: 25px;
+	height: 25px;
+}
+.header-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.header-title {
+	font-weight: bold;
+	font-size: 25px;
+	cursor: pointer;
+}
+.header-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.header-icons__icon img {
+	margin-right: 5px;
+	width: 25px;
+	height: 25px;
+}
+/*메인*/
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	margin: 20px 0 20px 0;
+}
+
+.board-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.board-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid rgb(222, 224, 227);
+	width: 60px;
+	height: 60px;
+}
+/*푸터*/
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.keyboard-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.keyboard-column__custom {
+	width: 70px;
+	height: 50px;
+	border: 1px solid #d3d6da;
+	border-radius: 8px;
+	background-color: #d3d6da;
+	margin-right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.keyboard-column {
+	width: 40px;
+	height: 50px;
+	border: 1px solid #d3d6da;
+	border-radius: 8px;
+	background-color: #d3d6da;
+	margin-right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	cursor: pointer;
+}
