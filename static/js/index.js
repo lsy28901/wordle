@@ -1,31 +1,37 @@
-const answer = 'APPLE';
 
 let attemps = 0; // 시도횟수
 let index = 0; // 칸의 인덱스
 let timer;
 
 function appStart() {
+    //게임 오버 문구
     const displayGameover = () => {
         const div = document.createElement("div");
         div.innerText = '게임이 종료됐습니다.'
         div.style = "display:flex; justify-content:center; align-items:center; position:absolute; top: 40vh; left:40vw; background-color:white; width:200px; height:100px;"
         document.body.appendChild(div)
     };
-
+    // 다음 줄로
     const nextLine = () => {
         if (attemps === 6) return gameover();
         attemps += 1;
         index = 0;
     }
-
+    // 게임종료
     const gameover = () => {
         window.removeEventListener("keydown", handleKeydown);
         displayGameover();
         clearInterval(timer);
     }
-
-    const handleEnterKey = () => {
+    //엔터로 정답 확인
+    const handleEnterKey = async () => {
+        //맞힌 정답수 
         let answerCorrect = 0;
+
+        const response = await fetch('/answer');
+        const answer = await response.json();
+
+
         for (let i = 0; i < 5; i++) {
             const block = document.querySelector(`.board-block[data-index='${attemps}${i}']`);
 
